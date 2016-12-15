@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+    <!-- 先定义一个50dp高的头布局;
+    在里面放置一个TextView,显示标题内容;
+    在头布局下定义一个ListView，显示省市县的数据 -->
+    <RelativeLayout 
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="#484E61">
+        <TextView 
+            android:id="@+id/title_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:textColor="#fff"
+            android:textSize="24sp"/>
+    </RelativeLayout>
+    <ListView 
+        android:id="@+id/list_view"
+        android:layout_width="match_parent"
+    	android:layout_height="match_parent">
+    </ListView>
+</LinearLayout>

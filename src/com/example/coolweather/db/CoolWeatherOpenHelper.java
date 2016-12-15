@@ -7,21 +7,21 @@ import android.database.sqlite.SQLiteOpenHelper;
 
 public class CoolWeatherOpenHelper extends SQLiteOpenHelper {
 	/*Province表建表语句*/
-	public static final String CREATE_PROVINCE="create table Province{"
+	public static final String CREATE_PROVINCE="create table Province("
 			+"id integer primary key autoincrement,"//自增长主键
 			+"province_name text,"//省名
 			+"province_code text)";//省级代号
 	/*City表建表语句*/
-	public static final String CREATE_CITY="create table City{"
+	public static final String CREATE_CITY="create table City("
 			+"id integer primary key autoincrement,"//自增长主键
 			+"city_name text,"//城市名
-			+"city_code text"//市级代号
+			+"city_code text,"//市级代号
 			+"province_id integer)";//City表关联Province表的外键
 	/*County表建表语句*/
-	public static final String CREATE_COUNTY="create table County{"
+	public static final String CREATE_COUNTY="create table County("
 			+"id integer primary key autoincrement,"//自增长主键
 			+"county_name text,"//县名
-			+"county_code text"//县级代号
+			+"county_code text,"//县级代号
 			+"city_id integer)";//County表关联City表的外键
 	
 	public CoolWeatherOpenHelper(Context context, String name,

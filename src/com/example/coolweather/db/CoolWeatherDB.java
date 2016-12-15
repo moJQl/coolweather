@@ -93,7 +93,7 @@ public class CoolWeatherDB {//封装一些常见的数据库操作
 			ContentValues values=new ContentValues();
 			values.put("county_name", county.getCountyName());
 			values.put("county_code",county.getCountyCode());
-			values.put("county_id", county.getCityId());
+			values.put("city_id", county.getCityId());
 			db.insert("County", null, values);
 		}
 	}
@@ -104,7 +104,7 @@ public class CoolWeatherDB {//封装一些常见的数据库操作
 		if(cursor.moveToFirst()){
 			do{
 				County county=new County();
-				county.setId(cursor.getInt(cursor.getInt(cursor.getColumnIndex("id"))));
+				county.setId(cursor.getInt(cursor.getColumnIndex("id")));
 				county.setCountyName(cursor.getString(cursor.getColumnIndex("county_name")));
 				county.setCountyCode(cursor.getString(cursor.getColumnIndex("county_code")));
 				county.setCityId(cityId);
